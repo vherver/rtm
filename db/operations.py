@@ -13,4 +13,5 @@ class MongoDBOperations:
         return self.client.collection.find_one({"_id": ObjectId(score_id)})
 
     def insert_score(self, score_data):
-        return self.client.collection.insert_one(score_data)
+        self.client.collection.insert_one(score_data)
+        self.client.close_connection()

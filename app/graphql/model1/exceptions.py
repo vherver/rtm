@@ -1,0 +1,2 @@
+class ScoreCalculationError(Exception):
+    pass
